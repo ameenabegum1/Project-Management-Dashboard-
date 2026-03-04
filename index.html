@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project & Task Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <h1>🚀 Project & Task Management Dashboard</h1>
+        <div class="tab-buttons">
+            <button onclick="showSection('projectSection')">📌 Projects</button>
+            <button onclick="showSection('taskSection')">📝 Tasks</button>
+        </div>
+    </header>
+
+    <!-- Project Management Section -->
+    <section id="projectSection" class="dashboard">
+        <div class="card">
+            <h2>Add New Project</h2>
+            <div class="form-group">
+                <input type="text" id="projectName" placeholder="Project Name">
+                <input type="text" id="projectDesc" placeholder="Project Description">
+                <input type="date" id="projectStart">
+                <input type="date" id="projectEnd">
+                <input type="number" id="projectMembers" placeholder="No. of Members">
+                <select id="projectStatus">
+                    <option value="pending">Pending</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <button onclick="addProject()">➕ Add Project</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📌 Project Dashboard</h2>
+            <div id="projectDashboard"></div>
+        </div>
+    </section>
+
+    <!-- Task Management Section -->
+    <section id="taskSection" class="dashboard hidden">
+        <div class="card">
+            <h2>Add New Task</h2>
+            <div class="form-group">
+                <input type="text" id="taskName" placeholder="Task Name">
+                <input type="text" id="taskDesc" placeholder="Task Description">
+                <input type="date" id="taskDueDate">
+                <select id="taskStatus">
+                    <option value="pending">Pending</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <button onclick="addTask()">➕ Add Task</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📝 Task Dashboard</h2>
+            <div id="taskDashboard"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
